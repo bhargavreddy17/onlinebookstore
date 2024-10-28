@@ -25,19 +25,18 @@
       </plugin>
     </plugins>
   </build>
-  
-  <repositories>
+
+
+  <distributionManagement>
     <repository>
-      <id>jfrog-repo</id>
-      <url>https://jfrogforjenkins1.jfrog.io/artifactory/test-libs-snapshot</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
+        <id>jfrog-repo</id>
+        <url>https://jfrogforjenkins1.jfrog.io/artifactory/test-libs-release</url>
     </repository>
-  </repositories>
+    <snapshotRepository>
+        <id>jfrog-snapshot-repo</id>
+        <url>https://your-artifactory-url/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+</distributionManagement>
   
   <dependencies>
     <dependency>
